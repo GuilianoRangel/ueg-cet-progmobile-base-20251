@@ -43,7 +43,6 @@ Aplicação de exemplo de Arquitetura
         * O componente do home_page não pode ter parâmetro no construtor
   * Configuração de rota no componente principal do main.dart com o código abaixo.
   ```dart
-
   ThemeData createTheme(BuildContext context, Brightness brightness) {
     return ThemeData(
       colorScheme: ColorScheme.fromSeed(
@@ -68,7 +67,7 @@ Aplicação de exemplo de Arquitetura
           initialPath: routePaths.home,
         ));
   }
-```
+  ```
   * Na pasta raiz do projeto executar o comando
   ```
   routefly
