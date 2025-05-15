@@ -10,14 +10,17 @@ Aplicação de exemplo de Arquitetura
 
 ## Configuração do routefly no path
 * rodar o comando para adicionar no path global:
-  ```flutter pub global activate routefly
+  ```
+  flutter pub global activate routefly
   ```
 * Adicionar o path global no PATH do Windos.
   * Para CMD.exe: 
-  ``` set PATH=%PATH%;%USERPROFILE%\AppData\Local\Pub\Cache\bin
+  ``` 
+  set PATH=%PATH%;%USERPROFILE%\AppData\Local\Pub\Cache\bin
   ```
   * Para power Shell
-  ```$env:PATH += ";$env:USERPROFILE\AppData\Local\Pub\Cache\bin"
+  ```
+  $env:PATH += ";$env:USERPROFILE\AppData\Local\Pub\Cache\bin"
   ```
 
 ## Criação de Rotas
@@ -67,5 +70,7 @@ Aplicação de exemplo de Arquitetura
   }
 ```
   * Na pasta raiz do projeto executar o comando
-  ```routefly```
+  ```
+  routefly
+  ```
   * 
