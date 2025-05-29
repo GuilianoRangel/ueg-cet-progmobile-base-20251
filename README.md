@@ -72,4 +72,52 @@ Aplicação de exemplo de Arquitetura
   ```
   routefly
   ```
-  * 
+
+## criação de pacote para reaproveitar funções
+```
+flutter create -t package confirm_dialog
+```
+
+* Para utiilizar fazer a referencia no pubspec.yaml
+
+## Mapear Swagger do backend.
+* Adicionar dependência do openapi_generator
+```shell
+flutter pub add openapi_generator_annotations
+flutter pub add dev:openapi_generator
+
+flutter pub global activate openapi_generator_cli
+flutter pub add dev:build_runner
+```
+* Configuração do arquivo para mapeamento.
+* Nome do arquivo config_openapi_generator.yaml
+```yaml
+generatorName: dart-dio
+inputSpec: http://127.0.0.1:8080/v3/api-docs
+outputDir: ./collegeapi
+additionalProperties:
+  pubName: collegeapi
+  pubVersion: 0.1.0
+  pubDescription: Pacote da API College
+  apiSuffix: ""
+```
+
+* Cria a pasta do package que irá armazenar os arquivos do mapeamento do swagger
+  * deve ter o mesmo nome da propriedade outputDir 
+```shell
+mkdir collegeapi
+```
+
+## Gerção da lib de conexão HTTP
+* Mandar fazer a geração do Package de conexão
+```shell
+openapi-generator generate -c config_openapi_generator.yaml
+```
+* para fazer o build e geração de .g.dart dos modelos
+```shell
+cd collegeapi
+flutter pub get
+flutter pub run build_runner build
+```
+## Backend de exempo:
+* https://github.com/GuilianoRangel/prog-webii-20242-backend-arqexemplo.git
