@@ -109,6 +109,7 @@ mkdir collegeapi
 ```
 
 ## Gerção da lib de conexão HTTP
+* Adicionar a dependencia do dio no pubspec.yaml biblioteca de conexão
 * Mandar fazer a geração do Package de conexão
 ```shell
 openapi-generator generate -c config_openapi_generator.yaml
@@ -118,6 +119,11 @@ openapi-generator generate -c config_openapi_generator.yaml
 cd collegeapi
 flutter pub get
 flutter pub run build_runner build
+```
+* incluir a dependência no pubspec.yaml
+  ```yaml 
+  collegeapi:
+   path: collegeapi
 ```
 ## Backend de exempo:
 * https://github.com/GuilianoRangel/prog-webii-20242-backend-arqexemplo.git
