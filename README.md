@@ -121,3 +121,6 @@ flutter pub run build_runner build
 ```
 ## Backend de exempo:
 * https://github.com/GuilianoRangel/prog-webii-20242-backend-arqexemplo.git
+
+## O projeto está utilizando ConfigSate com recurso de autosalvamento quando suas propriedades são alteradas 
+

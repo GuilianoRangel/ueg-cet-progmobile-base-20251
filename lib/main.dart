@@ -6,6 +6,8 @@ import 'main.route.dart';
 part 'main.g.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
 
